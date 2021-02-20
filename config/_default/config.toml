@@ -56,7 +56,17 @@ disableAliases = true  # Disable aliases when `redirects` is added to the `outpu
     [markup.goldmark.renderer]
       unsafe = true  # Enable user to embed HTML snippets in Markdown content.
   [markup.highlight]
-    codeFences = false  # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
+    codeFences = true  # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
+    anchorLineNos = false
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "plain"
+    tabWidth = 2
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 3
