@@ -26,6 +26,7 @@ bio: My interest include C++, Rust, modern CMake and other programming related t
 interests:
 - C++
 - Rust
+- Software Engineering
 - Fluid Visualization
 
 education:
@@ -74,3 +75,5 @@ I am a Software Engineer at [SAP](http://www.sap.com/) in Walldorf, Germany.
 Before that I obtained my bachelor's and master's degree in Computer Science from Heidelberg University.
 
 You can find my contact info on the contact tab. This site contains information about my career and various things I am interested in, including a small blog where I post about C++, CMake, Rust, and other technical topics.
+
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/PhilippJungResume.pdf" "newtab" >}}resumé{{< /staticref >}}.
