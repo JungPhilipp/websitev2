@@ -71,7 +71,9 @@ This way, we make sure that we use the content of `private_impl.cpp` in the righ
 
 ## Symbol Visibility (-fvisibility=hidden)[^1]
 If you are hiding ELF symbols by default (which you should), this method has the drawback that symbols from `private_impl.h` you are testing need to be marked as exported, so the linker can find them when linking `<test_target>`. This is done by specifying
-> `__attribute__ ((visibility ("default")))`
+```
+__attribute__ ((visibility ("default")))
+```
 
 for the symbol in question. Both GCC and Clang support this syntax.
 As a side note, with modern CMake versions > 3.0.2, you can auto generate a cross platform export definition using `GenerateExportHeader`[^2]
