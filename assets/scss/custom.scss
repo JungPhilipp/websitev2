@@ -10,12 +10,12 @@
 
 // COLOR VARIABLES
 // primary and secondary colors and variants
-$spc-primary:            #122140; // primary color
-$spc-primary-light:      #3d486b; // primary color, lighter variant
-$spc-primary-dark:       #00001b; // primary color, darker variant
-$spc-secondary:          #4285F4 ; // secondary color
-$spc-secondary-light:    #80b4ff ; // secondary color, lighter variant
-$spc-secondary-dark:     #0059c1 ; // secondary color, darker variant
+$spc-primary:            #4d4d4d; // primary color
+$spc-primary-light:      #797979; // primary color, lighter variant
+$spc-primary-dark:       #252525; // primary color, darker variant
+$spc-secondary:          #cc7832 ; // secondary color
+$spc-secondary-light:    #ffa75f ; // secondary color, lighter variant
+$spc-secondary-dark:     #964b00 ; // secondary color, darker variant
 
 // text colors
 $spc-text-high:          rgba(255, 255, 255, 0.87); // high emphasis/high priority, white 87% opacity
@@ -28,20 +28,19 @@ $spc-text-low:           rgba(255, 255, 255, 0.45); // disabled text, white 45% 
 $spc-bkg-light-std: #F8F8F8;
 //$spc-bkg-light-std: #EEEEEE;                 // light mode background
 $spc-bkg-dark-std: #121212;                    // dark mode background (00dp elevation level)
-
 // COLOR CALCULATIONS
 // below from mix($spc-primary, $spc-bkg-dark-std, 25)
-$spc-bkg-dark: #12151d;                                 // custom bkg
+$spc-bkg-dark: mix($spc-primary, $spc-bkg-dark-std, 25);  // custom bkg
 // below from mix($spc-primary, $spc-bkg-dark-std, 40)
-$spc-00dp: #121824;                                     // 00dp surface
+$spc-00dp: mix($spc-primary, $spc-bkg-dark-std, 40);                                     // 00dp surface
 // below from mix($spc-00dp, white, 95)                 // 00dp with 5% white overlay
-$spc-01dp: #1d232e;
+$spc-01dp: mix($spc-00dp, white, 95);
 // below from mix($spc-00dp, white, 93)                 // 00dp with 7% white overlay
-$spc-02dp: #222833;
+$spc-02dp: mix($spc-00dp, white, 93);
 // below from mix($spc-00dp, white, 92)                 // 00dp with 8% white overlay
-$spc-03dp: #242a35;
+$spc-03dp: mix($spc-00dp, white, 92);
 // below from mix($spc-00dp, white, 91)                 // 00dp with 9% white overlay
-$spc-04dp: #272c37;
+$spc-04dp: mix($spc-00dp, white, 91);
 
 // error colors
 $spc-error: rgba(169, 5, 51, 1);
@@ -141,6 +140,7 @@ a {
   h3 {
     font-size: 0.96rem;
     font-weight: 300;
+    text-align: center;
   }
 }
 
@@ -217,7 +217,7 @@ ul.ul-edu li {
 pre {
   border: 1px solid #fdfbf2; // code chunk border
   box-shadow: 2px 2px 2px #eee;
-  padding: 0.25em;
+  //padding: 0.25em;
   background: #fdfbf2;
   overflow-x: auto;
   border-radius: 0px; // modify rounding of corners
@@ -228,7 +228,9 @@ pre {
 }
 
 .hljs {
-	background: #272c37; // code chunk background
+	background: $spc-primary-dark; // code chunk background
+  color: $spc-text-high;
+  
 }
 
 // inline code
@@ -467,7 +469,7 @@ body.dark {
 
 .dark .navbar {
   font-weight: 700;                              // weight for navbar text
-  background: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);    // background for entire navbar
+  background: mix($spc-bkg-light-std, $spc-bkg-dark-std, 70);    // background for entire navbar
   box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 255, 255, .11);
   text-transform: uppercase;
   letter-spacing: .08em;                         // horizontal padding
@@ -516,7 +518,7 @@ body.dark {
     }
   }
   .navbar-collapse {                           // navbar collapsible dropdown menu
-    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
+    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 70);
   }
 }
 

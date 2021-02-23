@@ -45,7 +45,7 @@ When writing tests in `test/test.t.cpp`, how can we access private implementatio
 I have seen people do things, like including the relevant source file in their sources.
 ```cmake
 # This is the wrong thing to do
-SET (SOURCES
+set (sources
       ../src/private_impl.cpp
       test.t.cpp)
 ```
