@@ -13,9 +13,14 @@
 $spc-primary:            #4d4d4d; // primary color
 $spc-primary-light:      #797979; // primary color, lighter variant
 $spc-primary-dark:       #252525; // primary color, darker variant
-$spc-secondary:          #cc7832 ; // secondary color
-$spc-secondary-light:    #ffa75f ; // secondary color, lighter variant
-$spc-secondary-dark:     #964b00 ; // secondary color, darker variant
+$spc-secondary:          #cc7832; // secondary color
+$spc-secondary-light:    #ffa75f; // secondary color, lighter variant
+$spc-secondary-dark:     #964b00; // secondary color, darker variant
+$spc-ternary:            #4c8bf5;
+$spc-ternary-light:      #87bbff;
+$spc-ternary-dark:       #005fc2;
+
+
 
 // text colors
 $spc-text-high:          rgba(255, 255, 255, 0.87); // high emphasis/high priority, white 87% opacity
@@ -71,12 +76,12 @@ h1 {
 
 // links
 a {
-  color: $spc-secondary;  // link color
+  color: $spc-ternary;  // link color
   cursor: pointer;
   &:focus,
   &:hover,
   &:active {
-    color: $spc-secondary-dark !important;      // link color when hovering
+    color: $spc-ternary-dark !important;      // link color when hovering
   }
 }
 
@@ -94,7 +99,7 @@ a {
 
 .navbar {
   font-weight: 700;                         // weight for navbar text
-  box-shadow: 0 0 0.5px 0.5px $spc-primary-dark;
+  box-shadow: 0 0 0.5px 0.5px $spc-ternary-dark;
   text-transform: uppercase;
   letter-spacing: .08em;                    // horizontal padding
   padding: 0 2em;
@@ -103,7 +108,7 @@ a {
       &:focus,
       &:hover,
       &:active {
-        color: $spc-secondary !important;   // magnifying glass & palette icon color when hovering
+        color: $spc-ternary !important;   // magnifying glass & palette icon color when hovering
       }
     }
     .dropdown-menu {
@@ -117,14 +122,14 @@ a {
     &:hover,
     &:active {
       font-weight: 700;
-      color: $spc-secondary !important;   // text color of name when hovering
+      color: $spc-ternary !important;   // text color of name when hovering
     }
   }
   .navbar-toggler {
     &:focus,
     &:hover,
     &:active {
-      color: $spc-secondary;               // color of toggle menu
+      color: $spc-ternary;               // color of toggle menu
     }
   }
 }
@@ -247,10 +252,10 @@ code {
 .card {
 background: white;                        // text background for experience cards
   h4 a {
-    color: $spc-secondary;                        // text for card institution link
+    color: $spc-ternary-dark;                        // text for card institution link
     border-bottom: solid 1px transparent;
     &:hover {
-      color: $spc-secondary-dark;
+      color: $spc-ternary-dark;
     }
   }
   .card-image.hover-overlay::before {
@@ -267,6 +272,9 @@ background: white;                        // text background for experience card
 }
 .article-title{
     text-align: left;
+}
+.article-container{
+  max-width: 950px;
 }
 
 // ************************************************
@@ -319,8 +327,8 @@ div.alert.alert-warning {
 
 .btn { // Buttons for "send" button in the contact section
 color: $spc-primary-dark;                   // text
-border-color: $spc-secondary;            // border
-background-color: $spc-secondary;                 // button background
+border-color: $spc-ternary;            // border
+background-color: $spc-ternary;                 // button background
 font-size: 0.8rem;
 border-radius: 0.5px;
   &:hover {
@@ -330,14 +338,14 @@ border-radius: 0.5px;
   }
 }
 .btn-links .btn { // Buttons for document links
-  color: $spc-secondary;                   // text
-  border-color: $spc-secondary;            // border
+  color: $spc-ternary;                   // text
+  border-color: $spc-ternary;            // border
   background-color: white;                 // button background
   font-size: 0.8rem;
   &:hover {
     color: $spc-primary-dark !important;    // text when hovering
-    border-color: $spc-secondary;           // border when hovering
-    background-color: $spc-secondary;       // button background when hovering
+    border-color: $spc-ternary;           // border when hovering
+    background-color: $spc-ternary;       // button background when hovering
   }
 }
 .btn-toolbar { // Toolbar buttons
@@ -469,7 +477,7 @@ body.dark {
 
 .dark .navbar {
   font-weight: 700;                              // weight for navbar text
-  background: mix($spc-bkg-light-std, $spc-bkg-dark-std, 70);    // background for entire navbar
+  background: mix($spc-bkg-light-std, $spc-bkg-dark-std, 50);   // background for entire navbar
   box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 255, 255, .11);
   text-transform: uppercase;
   letter-spacing: .08em;                         // horizontal padding
@@ -481,7 +489,7 @@ body.dark {
       &:focus,
       &:hover,
       &:active {
-        color: $spc-secondary-dark !important;   // magnifying glass & palette icon color when hovering
+        color: $spc-secondary !important;   // magnifying glass & palette icon color when hovering
       }
     }
     .dropdown-menu {
@@ -518,7 +526,7 @@ body.dark {
     }
   }
   .navbar-collapse {                           // navbar collapsible dropdown menu
-    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 70);
+    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 50);
   }
 }
 
@@ -531,12 +539,12 @@ body.dark {
     color: $spc-text-high;
   }
   a { // links
-    color: $spc-secondary-dark;        // link color
+    color: $spc-secondary;        // link color
     cursor: pointer;
     &:focus,
     &:hover,
     &:active {
-      color: $spc-secondary !important;           // link color when hovering
+      color: $spc-secondary-light !important;           // link color when hovering
     }
   }
 }
@@ -547,7 +555,7 @@ body.dark {
 
 .dark {
   code {
-    color: mix($spc-text-medium, white, 70);   // inline and code block text
+    color: $spc-text-high;   // inline and code block text
     background: $spc-04dp;
     font-size: 0.9em;
   }
@@ -642,8 +650,8 @@ body.dark {
     background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);                 // button background
     &:hover {
       color: $spc-primary-dark !important;    // text when hovering
-      border-color: $spc-secondary-dark;           // border when hovering
-      background-color: $spc-secondary-dark;       // button background when hovering
+      border-color: $spc-secondary;           // border when hovering
+      background-color: $spc-secondary;       // button background when hovering
     }
   }
   .btn-toolbar { // Toolbar buttons
@@ -662,6 +670,9 @@ body.dark {
 // ************************************************
 
 .dark {
+  .search-modal{
+    background-color: $spc-00dp;
+  }
   .search-header {                                  // main page search bar
   background-color: $spc-00dp;
   }
@@ -678,6 +689,7 @@ body.dark {
   }
   #search-box::before {
     color: $spc-bkg-light-std;                      // magnifying glass icon in main search bar
+
   }
   select.pub-filters.form-control.form-control-sm { // search filters on full publication list
     background-color: $spc-00dp;
@@ -686,12 +698,12 @@ body.dark {
     border-width: 1px;
     &:hover {
       border-style: none;
-      box-shadow: 0 0 0 2px $spc-secondary-dark;
+      box-shadow: 0 0 0 2px $spc-ternary-dark;
     }
     &:focus {
       border-style: solid;
       border-width: 1px;
-      border: $spc-secondary-dark;
+      border: $spc-ternary-dark;
     }
   }
 }
