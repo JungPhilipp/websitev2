@@ -4,7 +4,7 @@ summary: "How to setup a Jenkins server with Docker Compose and Jenkins Configur
 draft: true
 date: "2020-06-12T00:00:00Z"
 authors: 
-  - philippjung
+  - admin
 tags:
   - Jenkins
   - Docker

@@ -1,0 +1,3 @@
+Light Theme:
+Hover theme selection Dark/automatic
+Hover Menu items on top

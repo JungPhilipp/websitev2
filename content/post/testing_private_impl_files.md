@@ -4,7 +4,7 @@ summary: "Using modern CMake to test private C/C++ implementation files without 
 draft: false
 date: "2020-02-05T00:00:00Z"
 authors:
-  - philippjung
+  - admin
 tags:
   - C++
   - C

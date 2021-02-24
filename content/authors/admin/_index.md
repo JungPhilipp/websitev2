@@ -1,10 +1,6 @@
 ---
 # Display name
-name: Philipp Jung
-
-# Username (this should match the folder name)
-authors:
-- philippjung
+title: Philipp Jung
 
 # Is this the primary user of the site?
 superuser: true
@@ -64,11 +60,8 @@ social:
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
 
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
-user_groups:
-- Researchers
-- Visitors
+# Highlight the author in author lists? (true/false)
+highlight_name: false
 ---
 Welcome to my personal website.
 I am a Software Engineer at [SAP SE](http://www.sap.com/) in Walldorf, Germany.

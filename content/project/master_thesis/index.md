@@ -4,7 +4,7 @@
 title: "On the Frame of Reference in Fluid Visualization"
 summary: "In my master thesis I explore the dependence of feature extraction techniques, such as vortex core line extraction and time-dependent vector field topology, on the frame the respective frame of reference."
 authors:
-  - philippjung
+  - admin
 tags:
   - Fluid Visualization
   - C++
