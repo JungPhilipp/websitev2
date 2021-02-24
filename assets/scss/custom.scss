@@ -81,7 +81,7 @@ a {
   &:focus,
   &:hover,
   &:active {
-    color: $spc-ternary-dark !important;      // link color when hovering
+    color: $spc-ternary-dark;      // link color when hovering
   }
 }
 
@@ -108,7 +108,7 @@ a {
       &:focus,
       &:hover,
       &:active {
-        color: $spc-ternary !important;   // magnifying glass & palette icon color when hovering
+        color: $spc-ternary;   // magnifying glass & palette icon color when hovering
       }
     }
     .dropdown-menu {
@@ -122,7 +122,7 @@ a {
     &:hover,
     &:active {
       font-weight: 700;
-      color: $spc-ternary !important;   // text color of name when hovering
+      color: $spc-ternary;   // text color of name when hovering
     }
   }
   .navbar-toggler {
@@ -152,9 +152,9 @@ a {
 // WIP: Playing with Interests & Education sizes
 /*
 .col-12.col-lg-8 {                // About me container
-  padding-top: 12px !important;   // aligns "interests/education" headings with name
+  padding-top: 12px;   // aligns "interests/education" headings with name
   //flex: 0 0 auto;               // flex: -grow -shrink -basis
-  //min-width: 65% !important;
+  //min-width: 65%;
   .row {
     .col-md-5 {                     // Interests child-container
     flex: 3 0 100%;
@@ -343,7 +343,7 @@ border-radius: 0.5px;
   background-color: white;                 // button background
   font-size: 0.8rem;
   &:hover {
-    color: $spc-primary-dark !important;    // text when hovering
+    color: $spc-primary-dark;    // text when hovering
     border-color: $spc-ternary;           // border when hovering
     background-color: $spc-ternary;       // button background when hovering
   }
@@ -485,19 +485,19 @@ body.dark {
   .navbar-nav {
     display: flex;
     .nav-link {
-      color: rgba($spc-bkg-dark-std, .85) !important;
+      color: rgba($spc-bkg-dark-std, .85);
       &:focus,
       &:hover,
       &:active {
-        color: $spc-secondary !important;   // magnifying glass & palette icon color when hovering
+        color: $spc-secondary;   // magnifying glass & palette icon color when hovering
       }
     }
     .dropdown-menu {
       border: 0.5px solid mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
-      background-color: mix($spc-00dp, white, 98%) !important;   // top/bottom borders for theme menu dropdown
+      background-color: mix($spc-00dp, white, 98%);   // top/bottom borders for theme menu dropdown
       z-index: 1032;                             // I18n dropdown over mobile expanded menu.
       .dropdown-item {
-        background-color: mix($spc-00dp, white, 98%) !important; // theme dropdown background
+        background-color: mix($spc-00dp, white, 98%); // theme dropdown background
         font-weight: 700;                        // sets weight for text in theme selection dropdown
       }
     }
@@ -505,7 +505,7 @@ body.dark {
   .dropdown-item.active,
   .dropdown-item-active {
     font-weight: bold;
-    color: $spc-secondary !important;
+    color: $spc-secondary;
   }
   .navbar-brand {
     color: rgba($spc-bkg-dark-std, .85);
@@ -513,7 +513,7 @@ body.dark {
     &:hover,
     &:active {
       font-weight: 700;
-      color: $spc-secondary-dark !important;   // text color of name when hovering
+      color: $spc-secondary-dark;   // text color of name when hovering
     }
   }
   .navbar-toggler {
@@ -544,7 +544,7 @@ body.dark {
     &:focus,
     &:hover,
     &:active {
-      color: $spc-secondary-light !important;           // link color when hovering
+      color: $spc-secondary-light;           // link color when hovering
     }
   }
 }
@@ -585,7 +585,7 @@ body.dark {
   background-image: linear-gradient(to bottom, rgba(233, 231, 245, 0.2), rgba(233, 231, 245, 0.2));
   }
   #MathJax_Zoom {
-  background-color: rgb(68, 71, 90) !important;
+  background-color: rgb(68, 71, 90);
   }
   table table {
     background-color: rgb(40, 42, 54);
@@ -612,15 +612,15 @@ body.dark {
       color: $spc-secondary-dark;                        // text for card institution link
       border-bottom: solid 1px transparent;
       &:hover {
-        color: $spc-secondary !important;
+        color: $spc-secondary;
       }
     }
   }
   .experience .m-2 .border.exp-fill {           // timeline diagram for experience cards -- fill
-    background-color: $spc-secondary-dark !important;
+    background-color: $spc-secondary-dark;
   }
   .experience .m-2 .border, .experience .col.border-right {
-      border-color: $spc-secondary-dark !important;
+      border-color: $spc-secondary-dark;
   }
   .card-simple {
     background: $spc-01dp;                        // text background for post cards
@@ -635,7 +635,7 @@ body.dark {
 
 .dark {
   .btn { // Buttons for "send" button in the contact section
-  color: $spc-primary-dark;                   // text
+  color: $spc-bkg-dark-std;                   // text
   border-color: $spc-secondary-dark;            // border
   background-color: $spc-secondary-dark;                 // button background
     &:hover {
@@ -649,7 +649,7 @@ body.dark {
     border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);            // border
     background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);                 // button background
     &:hover {
-      color: $spc-primary-dark !important;    // text when hovering
+      color: $spc-primary-dark;    // text when hovering
       border-color: $spc-secondary;           // border when hovering
       background-color: $spc-secondary;       // button background when hovering
     }
