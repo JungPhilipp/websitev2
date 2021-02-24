@@ -99,7 +99,7 @@ a {
 
 .navbar {
   font-weight: 700;                         // weight for navbar text
-  box-shadow: 0 0 0.5px 0.5px $spc-ternary-dark;
+  //box-shadow: 0 0 0.5px 0.5px $spc-ternary-dark;
   text-transform: uppercase;
   letter-spacing: .08em;                    // horizontal padding
   padding: 0 2em;
@@ -673,12 +673,14 @@ body.dark {
     }
   }
   .btn-links .btn { // Buttons for in-post document links
-    color: $spc-primary-dark;                   // text
+    color: $spc-primary-dark !important;                   // text
     border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);            // border
     background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);                 // button background
+    &:focus,
+    &:active,
     &:hover {
-      color: $spc-primary-dark;    // text when hovering
-      border-color: $spc-secondary;           // border when hovering
+      //color: $spc-primary-dark;    // text when hovering
+      //border-color: $spc-secondary;           // border when hovering
       background-color: $spc-secondary;       // button background when hovering
     }
   }
@@ -701,6 +703,11 @@ body.dark {
     }
     .btn.btn-primary.active {
       background-color: $spc-secondary-dark !important; // background of active
+    }
+  }
+  .btn-primary.active:not(:disabled):not(.disabled) {
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $spc-bkg-light-std;
     }
   }
 }
@@ -738,7 +745,7 @@ body.dark {
     border-width: 1px;
     &:hover {
       border-style: none;
-      box-shadow: 0 0 0 2px $spc-ternary-dark;
+      //box-shadow: 0 0 0 2px $spc-ternary-dark;
     }
     &:focus {
       border-style: solid;
