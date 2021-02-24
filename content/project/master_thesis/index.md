@@ -7,7 +7,6 @@ authors:
   - admin
 tags:
   - Fluid Visualization
-  - C++
 
 categories: []
 date: 2020-02-05T18:29:57+01:00

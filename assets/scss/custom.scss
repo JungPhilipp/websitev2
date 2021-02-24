@@ -106,16 +106,28 @@ a {
   .navbar-nav {
     .nav-link {
       &:focus,
-      &:hover,
+      &:hover {
+          color: $spc-ternary !important;
+        }
       &:active {
-        color: $spc-ternary;   // magnifying glass & palette icon color when hovering
+        color: $spc-ternary-dark !important;   // magnifying glass & palette icon color when hovering
       }
     }
     .dropdown-menu {
       .dropdown-item {
         font-weight: 700;                   // sets weight for text in theme selection dropdown
+        &:focus,
+        &:active,
+        &:hover {
+          color:$spc-ternary !important;
+        }
       }
     }
+  }
+  .dropdown-item.active,
+  .dropdown-item-active {
+    font-weight: bold;
+    color: $spc-ternary-dark;
   }
   .navbar-brand {
     &:focus,
@@ -125,12 +137,15 @@ a {
       color: $spc-ternary;   // text color of name when hovering
     }
   }
-  .navbar-toggler {
-    &:focus,
-    &:hover,
-    &:active {
-      color: $spc-ternary;               // color of toggle menu
-    }
+}
+
+.navbar-toggler {
+  color: rgba($spc-bkg-dark-std, .85);
+  //background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
+  &:focus,
+  &:hover,
+  &:active {
+    color: $spc-ternary;              // color of toggle menu
   }
 }
 
@@ -184,7 +199,7 @@ ul.ul-edu li {
 */
 
 .network-icon li:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 .home-section {
@@ -236,7 +251,7 @@ pre {
 .hljs {
 	background: $spc-primary-dark; // code chunk background
   color: $spc-text-high;
-  
+
 }
 
 // inline code
@@ -444,7 +459,7 @@ iframe {
     background-color: $spc-00dp;   // even sections: experience, recent posts
   }
 }
-
+/*
 // body of site: _dark.scss
 body.dark {
   .docs-toc-link,
@@ -457,11 +472,12 @@ body.dark {
     padding: 10px;
   }
 }
-
+*/
 body.dark {
   background-color: $spc-00dp;         // base surface
 }
 
+/*
 // Contact form
 .dark .form-control {
   color: $spc-text-medium;            // text of contact boxes
@@ -471,7 +487,7 @@ body.dark {
   border: 0.5px solid $spc-text-low;
   padding: 10px;
 }
-
+*/
 // ************************************************
 // Navigation bar: _nav.scss
 // ************************************************
@@ -487,11 +503,13 @@ body.dark {
     display: flex;
     .nav-link {
       color: rgba($spc-bkg-dark-std, .85);
-      &:focus,
-      &:hover,
-      &:active {
-        color: $spc-secondary;   // magnifying glass & palette icon color when hovering
-      }
+        &:focus,
+        &:hover {
+            color: $spc-secondary-light !important;
+          }
+        &:active {
+          color: $spc-secondary-dark !important;   // magnifying glass & palette icon color when hovering
+        }
     }
     .dropdown-menu {
       border: 0.5px solid mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
@@ -500,35 +518,44 @@ body.dark {
       .dropdown-item {
         background-color: mix($spc-00dp, white, 98%); // theme dropdown background
         font-weight: 700;                        // sets weight for text in theme selection dropdown
+        &:focus,
+        &:active,
+        &:hover {
+          color: $spc-secondary-light !important;
+        }
       }
     }
   }
+
   .dropdown-item.active,
   .dropdown-item-active {
     font-weight: bold;
-    color: $spc-secondary;
+    color: $spc-secondary !important;
   }
   .navbar-brand {
-    color: rgba($spc-bkg-dark-std, .85);
+    color: rgba($spc-bkg-dark-std, .85); // Site name
     &:focus,
     &:hover,
     &:active {
       font-weight: 700;
-      color: $spc-secondary-dark;   // text color of name when hovering
+      color: $spc-secondary-light;   // text color of name when hovering
     }
   }
+
   .navbar-toggler {
     color: rgba($spc-bkg-dark-std, .85);
-    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
+    //background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
     &:focus,
     &:hover,
     &:active {
-      color: $spc-secondary-dark;              // color of toggle menu
+      color: $spc-secondary-light;              // color of toggle menu
     }
   }
+
   .navbar-collapse {                           // navbar collapsible dropdown menu
     background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 50);
   }
+
 }
 
 // ************************************************
@@ -545,7 +572,7 @@ body.dark {
     &:focus,
     &:hover,
     &:active {
-      color: $spc-secondary-light;           // link color when hovering
+      color: $spc-secondary-light !important;           // link color when hovering
     }
   }
 }
@@ -662,6 +689,18 @@ body.dark {
     }
     .btn:last-child {
       border-radius: 0px;
+    }
+    .btn.btn-primary {
+      background-color: $spc-secondary; // Toolbar inactive background
+      color: $spc-bkg-light-std !important;        // text color
+      &:focus,
+      &:active,
+      &:hover{
+        background-color: $spc-secondary-light !important; // background of inactive when hovering
+      }
+    }
+    .btn.btn-primary.active {
+      background-color: $spc-secondary-dark !important; // background of active
     }
   }
 }

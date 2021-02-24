@@ -7,10 +7,10 @@ authors:
   - admin
 tags:
   - C++
-  - C++20
+  - C++11
+  - C++14
+  - C++17
   - Copy-Elision
-  - RVO
-  - NRVO
 ---
 Regardless of what you think of Herb Sutter's [Almost Always Auto (AAA)](https://herbsutter.com/2013/08/12/gotw-94-solution-aaa-style-almost-always-auto/) style, there are situations where using auto helps to not repeat oneself.
 For example, when using `std::make_unique<>`[^1] and `std::make_shared<>`.
@@ -40,7 +40,7 @@ int main(){
     auto s = S{};
 }
 ```
-Even with `-std=c++11` only `"Default construct S"` is printed. Since copy elision is not guarenteed prior to C++17 deleting the move constructor in line 7 will result in a compilation error when using C++11/14.
+Even with `-std=c++11` only `"Default construct S"` is printed. Since copy elision is not guarenteed prior to C++17 deleting the move constructor will result in a compilation error when using C++11/14.
 ```cpp
 S(S&&) = delete;
 ```
