@@ -583,7 +583,7 @@ body.dark {
 
 .dark {
   code {
-    color: $spc-text-high;   // inline and code block text
+    color: white !important;   // inline and code block text
     background: $spc-04dp;
     font-size: 0.9em;
   }
