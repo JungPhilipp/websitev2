@@ -14,9 +14,9 @@ tags:
 ---
 Compilers have become incredible optimization machines, which use loop unrolling, heap elision, devirtualization and other techniques to turn (regular) code into highly efficient machine instructions.
 One if these optimization techniques elides copies and moves by constructing an object directly into the target of the omitted cope/move operation.
-This technique is called copy/move elision and is now guaranteed by the C++17 standard to occur in certain situations
+This technique is called copy/move elision and is now guaranteed by the C++17 standard to occur in certain situations.
 
-An example of (guaranteed) copy elision occurs during initialization from a temporary.
+An example of (guaranteed) copy elision occurs when initializing from a temporary.
 ```cpp
 #include <iostream>
 struct Foo {
@@ -31,13 +31,16 @@ struct Foo {
 ```cpp
   auto foo = Foo();
 ```
-Regardless of the standard version, compiling and running this with a modern compiler will print:
-```plain
+Regardless of the C++ version, compiling and running this with a modern compiler will print:
+```
+  """
   Default Constructor
   Destructor
+  """
 ```
-Even with earlier versions of C++, compilers were allowed to elide copies in this situation regardless of potential side-effects of the copy/move constructors.
-However, prior to C++17 `Foo` has to be move-constructable even though the move constructor is not actually called.
+Even in earlier versions of C++, compilers were allowed to elide copies in this situation.
+This is true regardless of potential side-effects of the copy/move constructor.
+However, when using C++11/14 `Foo` has to be move-constructable even though the move constructor is not actually called.
 Deleting the move constructor `Foo (Foo &&) = delete` results in a compile error when using C++11/14. This is because the program has to be well-formed even when copy elision is not performed, thus requiring the move constructor.
 The C++17 standard guarantees copy elision in this case.
 

@@ -57,7 +57,7 @@ description = ""
 # Enable source code highlighting? true/false
 # Documentation: https://wowchemy.com/docs/writing-markdown-latex/#highlighting-options
 highlight = true
-highlight_languages = ["r", "cmake", "rust", "cpp", "python"]  # Add support for highlighting additional languages
+highlight_languages = ["r", "cmake", "rust", "cpp", "python", "diff", "json"]  # Add support for highlighting additional languages
 highlight_style = "darcula"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
 
 # Enable LaTeX math rendering? true/false
@@ -216,7 +216,7 @@ plugins_js  = []
   #   "": Disabled
   #   "disqus": Disqus (https://disqus.com)
   #   "commento": Commento (https://commento.io)
-  provider = ""
+  engine = "disqus"
 
   # Which page types are commentable?
   commentable = {page = true, post = true, docs = true, project = true, publication = true, talk = true}
