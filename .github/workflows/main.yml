@@ -33,5 +33,3 @@ jobs:
 
       - name: Deploy
         run: scripts/deploy.sh
-        env:
-          DEPLOY_USERNAME: pjunggithub
