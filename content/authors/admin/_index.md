@@ -44,7 +44,7 @@ social:
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
 - icon: github
   icon_pack: fab
-  link: https://github.com/JungStar
+  link: https://github.com/JungPhilipp
 - icon: linkedin
   icon_pack: fab
   link: https://linkedin.com/in/philipp-jung95
