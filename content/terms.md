@@ -26,7 +26,7 @@ Thanks to [Bastian Rieck](http://bastian.rieck.me/) for that little comment ;)
 >    Karlsruher Str. 48
 >    69126 Heidelberg
 >
->    philippjung@mailbox.org
+>    philipp.jung@mailbox.org
 >
 —–END GERMAN LEGAL MUMBO-JUMBO—
 
