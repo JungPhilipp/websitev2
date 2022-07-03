@@ -24,9 +24,10 @@ jobs:
           extended: true
 
       - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.5.4
+        uses: kielabokkie/ssh-key-and-known-hosts-action@v1
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-host: philipp-jung.de
 
       - name: Build
         run: hugo --minify
