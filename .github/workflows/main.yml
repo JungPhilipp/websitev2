@@ -1,4 +1,4 @@
-name: GitHub Pages
+name: Build & Deply Website
 
 on:
   push:
@@ -27,4 +27,9 @@ jobs:
         run: hugo --minify
 
       - name: Deploy
+      - uses: webfactory/ssh-agent@v0.5.4
         run: scripts/deploy.sh
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        env:
+          DEPLOY_USERNAME: pjunggithub
