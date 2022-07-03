@@ -23,13 +23,15 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
       - name: Build
         run: hugo --minify
 
       - name: Deploy
-        uses: webfactory/ssh-agent@v0.5.4
         run: scripts/deploy.sh
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         env:
           DEPLOY_USERNAME: pjunggithub
