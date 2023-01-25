@@ -51,7 +51,7 @@ There are three distinct cases where copy elision can occur:
   3. Throwing/catching exceptions by value
 
 I will cover the latter two in future blog posts.
-As you might infer from the above results, it is hard to pass non-moveable types around without guaranteed copy elision.
+As you might infer from the above results, it is hard to pass non-movable types around without guaranteed copy elision.
 
 ### How guaranteed copy elision works[^1]
 To understand how guaranteed copy elision is achieved in C++17, we need to take a look at C++ value categories (which confusingly enough categorize expressions, not values).
