@@ -64,9 +64,9 @@ email: ""
 highlight_name: false
 ---
 Welcome to my personal website.
-I am a Software Engineer at [SAP SE](http://www.sap.com/) in Walldorf, Germany.
-Before that I obtained my bachelor's and master's degree in Computer Science from Heidelberg University.
-
-You can find my contact info on the contact tab. This site contains information about my career and various things I am interested in, including a small blog where I post about C++, CMake, Rust, and other technical topics.
+I am a Software Engineer at [SAP SE](http://www.sap.com/) in Walldorf, Germany, where I work on the HANA database kernel.
+After I obtained my master's degree in Computer Science from [Heidelberg University](https://www.uni-heidelberg.de/en),
+ I worked on structural mechanics simulations at [Volume Graphics](https://www.volumegraphics.com/).
+You can find my contact info on the contact tab below. This site contains information about my career and various things I am interested in, including a small blog where I sometimes post about C++, CMake, Rust, and other technical topics.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/PhilippJungResume.pdf" "newtab" >}}resumé{{< /staticref >}}.
