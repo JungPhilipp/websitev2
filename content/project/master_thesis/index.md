@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "On the Frame of Reference in Fluid Visualization"
-summary: "In my master thesis I explore the dependence of feature extraction techniques, such as vortex core line extraction and time-dependent vector field topology, on the frame the respective frame of reference."
+summary: "In my master thesis I explore the dependence of feature extraction techniques, such as vortex core line extraction and time-dependent vector field topology, on the respective frame of reference."
 authors:
   - admin
 tags:
