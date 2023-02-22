@@ -1,6 +1,6 @@
 ---
 title: "Using modern CMake to test private C++ implementation files"
-summary: "Using modern CMake to test private C/C++ implementation files without exposing them to the library user."
+summary: "Using modern CMake to test private C/C++ implementation files without exposing them to library users."
 draft: false
 date: "2020-02-05T00:00:00Z"
 authors:
