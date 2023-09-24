@@ -60,8 +60,8 @@ This can be done using CMakes property system, i.e., we can get the necessary pr
 add_executable(<test_target> test.t.cpp)
 target_link_libraries(<test_target> PRIVATE <component_target>)
 
-get_target_property (private_include_dirs <test_target> INCLUDE_DIRECTORIES)
-get_target_property (private_link_libraries <test_target> LINK_LIBRARIES)
+get_target_property (private_include_dirs <component_target> INCLUDE_DIRECTORIES)
+get_target_property (private_link_libraries <component_target> LINK_LIBRARIES)
 
 target_include_directories (<test_target> PRIVATE ${private_include_dirs})
 target_link_libraries (<test_target> PRIVATE ${private_link_libraries})
