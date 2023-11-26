@@ -13,7 +13,7 @@ tags:
   - Copy Elision
 ---
 Compilers have become incredible optimization machines, which use loop unrolling, heap elision, devirtualization and other techniques to turn (regular) code into highly efficient machine instructions.
-One if these optimization techniques elides copies and moves by constructing an object directly into the target of the omitted cope/move operation.
+One of these optimization techniques elides copies and moves by constructing an object directly into the target of the omitted cope/move operation.
 This technique is called copy/move elision and is now guaranteed by the C++17 standard to occur in certain situations.
 
 An example of (guaranteed) copy elision occurs when initializing from a temporary.
